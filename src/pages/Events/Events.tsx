@@ -20,6 +20,7 @@ import { SearchField } from '../../components/ui/SearchField/SearchField'
 import { SvgList } from '../../assets/images/EventsToggle/List'
 import { SvgGrid } from '../../assets/images/EventsToggle/Grid'
 import cn from 'classnames'
+import { ViewToggle, ViewToggleType } from '../../shared/types/viewToggle.types'
 
 export const Events = (): JSX.Element => {
 	const { getAllEventCards } = useActions()
@@ -28,10 +29,12 @@ export const Events = (): JSX.Element => {
 	const [currentPage, setCurrentPage] = useState<number>(1)
 	const [pageSize, setPageSize] = useState<number>(5)
 	const [searchTerm, setSearchTerm] = useState<string>('')
-	const [viewToggle, setViewToggle] = useState<'list' | 'grid'>('list')
+	const [viewToggle, setViewToggle] = useState<ViewToggleType>(ViewToggle.List)
+
 	useEffect(() => {
 		setCurrentPage(1)
 	}, [searchTerm])
+
 	useEffect(() => {
 		getAllEventCards()
 	}, [getAllEventCards])
@@ -67,7 +70,7 @@ export const Events = (): JSX.Element => {
 		return searched
 	}, [currentPage, pageSize, searched])
 
-	const setViewToggleHandler = (value: 'list' | 'grid') => setViewToggle(value)
+	const setViewToggleHandler = (value: ViewToggleType) => setViewToggle(value)
 
 	return (
 		<div className={styles.eventsWrapper}>
@@ -79,25 +82,25 @@ export const Events = (): JSX.Element => {
 				<NumberInput title={'Show'} value={pageSize} description={'events per page'} setPageSize={setPageSizeHandler} />
 				<SearchField searchTerm={searchTerm} setSearchTerm={setSearchTerm} placeholder={'Search event...'} />
 				<div className={'flex justify-center items-center'}>
-					<div className={'ml-[40px] cursor-pointer'} onClick={() => setViewToggleHandler('list')}>
-						<SvgList color={viewToggle === 'list' ? '#FF3F3A' : '#424551'} />
+					<div className={'ml-[40px] cursor-pointer'} onClick={() => setViewToggleHandler(ViewToggle.List)}>
+						<SvgList color={viewToggle === ViewToggle.List ? '#FF3F3A' : '#424551'} />
 					</div>
-					<div className={'ml-[13.5px] cursor-pointer'} onClick={() => setViewToggleHandler('grid')}>
-						<SvgGrid color={viewToggle === 'grid' ? '#FF3F3A' : '#424551'} />
+					<div className={'ml-[13.5px] cursor-pointer'} onClick={() => setViewToggleHandler(ViewToggle.Grid)}>
+						<SvgGrid color={viewToggle === ViewToggle.Grid ? '#FF3F3A' : '#424551'} />
 					</div>
 				</div>
 			</div>
 			{isLoading
 				? <div className={styles.loading}>Loading...</div>
 				: <div className={cn({
-					[styles.gridView]: viewToggle === 'grid',
-					[styles.listView]: viewToggle === 'list',
+					[styles.gridView]: viewToggle === ViewToggle.Grid,
+					[styles.listView]: viewToggle === ViewToggle.List,
 				})}>
 					{eventsList
 						? currentEventsList?.map(cards => {
 							return (
 								<EventCard date={cards.date} title={cards.title} type={cards.type}
-								           duration={cards.duration} id={cards.id} key={cards.id} />
+								           duration={cards.duration} id={cards.id} key={cards.id} viewToggle={viewToggle}/>
 							)
 						})
 						: <div>Events not found.</div>}

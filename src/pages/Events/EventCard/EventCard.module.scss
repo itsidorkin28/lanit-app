@@ -1,14 +1,43 @@
-.card {
-    @apply border rounded flex hover:shadow-md transition-all mb-[24px] last:mb-0
-    px-[40px] py-[32px] justify-start items-center;
+.cardGrid {
+    @apply border rounded flex flex-col hover:shadow-md transition-all mb-[1.5rem] last:mb-0
+    px-[2.5rem] py-8 justify-center items-start;
 
-    .eventCards {
-        @apply flex flex-col;
+    .date {
+        @apply mb-[1.25rem];
+        .number {
+            @apply text-[1.75rem] leading-[150%] font-black;
+            color: var(--primary-color);
+        }
+
+        .month {
+            @apply text-[1.75rem] leading-[150%] font-bold;
+            color: var(--primary-color);
+
+        }
+
+        .time {
+            .hours {
+                @apply leading-[160%];
+                color: var(--gray-700)
+            }
+        }
+    }
+
+    .text {
+        @apply mb-[1.5rem];
+        .title {
+            @apply text-[1.125rem] leading-[150%] mb-[0.5rem] font-bold;
+        }
+
+        .type {
+            @apply leading-[160%] first-letter:uppercase;
+            color: var(--gray-700)
+        }
     }
 
     .button {
-        @apply border rounded px-[32px] font-bold text-[14px] leading-[44px] transition-all
-        hover:text-white;
+        @apply text-[0.875rem] leading-[2.75rem] last-of-type:mt-auto
+        border rounded px-8 font-bold transition-all hover:text-white w-full;
         color: var(--primary-color);
         border-color: var(--primary-color);
 
@@ -17,3 +46,52 @@
         }
     }
 }
+
+.cardList {
+    @apply border rounded flex hover:shadow-md transition-all mb-[1.5rem] last:mb-0
+    px-[2.5rem] py-8 justify-start items-center;
+
+    .date {
+        @apply flex;
+
+        .number {
+            @apply text-[3rem] leading-[130%] font-black tracking-wider;
+            color: var(--primary-color);
+        }
+
+        .time {
+            @apply ml-5 mr-10 flex flex-col justify-center items-start;
+            .month {
+                @apply text-[1.25rem] leading-[150%] font-bold;
+            }
+
+            .hours {
+                @apply leading-[160%];
+                color: var(--gray-700)
+            }
+        }
+    }
+
+    .text {
+        .title {
+            @apply text-[1.25rem] leading-[150%] font-bold;
+        }
+
+        .type {
+            @apply leading-[160%] first-letter:uppercase;
+            color: var(--gray-700)
+        }
+    }
+
+    .button {
+        @apply text-[0.875rem] leading-[2.75rem] last-of-type:ml-auto
+        border rounded px-8 font-bold transition-all hover:text-white;
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+
+        &:hover {
+            background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+        }
+    }
+}
+
