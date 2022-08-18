@@ -1,0 +1,22 @@
+.dropdown {
+    @apply relative cursor-pointer select-none;
+    width: 160px;
+    margin: 0 auto;
+
+    .btn {
+        @apply border rounded p-[10px] bg-white flex items-center justify-between;
+    }
+
+    .content {
+        @apply absolute top-[110%] p-[10px] bg-white left-0 border rounded w-full;
+    }
+
+    .item {
+        @apply p-[10px] hover:bg-[#f2f0f0] hover:cursor-pointer transition-all;
+    }
+}
+
+
+
+
+
