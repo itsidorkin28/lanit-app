@@ -3,6 +3,7 @@ import classnames from 'classnames'
 import { usePagination, DOTS } from './usePagination'
 import './Pagination.scss'
 import { PaginationPropsType } from './Pagination.props'
+import { SvgPageArrow } from '../../../assets/images/Pagination/PageArrow'
 
 export const Pagination = (props: PaginationPropsType) => {
 	const {
@@ -44,9 +45,11 @@ export const Pagination = (props: PaginationPropsType) => {
 				})}
 				onClick={onPrevious}
 			>
-				<div className={classnames('arrow left', {
+				<div className={classnames({
 					'arrowNone': currentPage === 1,
-				})} />
+				})}>
+					<SvgPageArrow className={'left'}/>
+				</div>
 			</li>
 			{paginationRange!.map((pageNumber, index) => {
 				if (pageNumber === DOTS) {
@@ -70,9 +73,11 @@ export const Pagination = (props: PaginationPropsType) => {
 				})}
 				onClick={onNext}
 			>
-				<div className={classnames('arrow right', {
+				<div className={classnames({
 					'arrowNone': currentPage === lastPage,
-				})} />
+				})}>
+					<SvgPageArrow />
+				</div>
 			</li>
 		</ul>
 	)

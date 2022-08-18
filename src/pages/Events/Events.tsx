@@ -75,6 +75,7 @@ export const Events = (): JSX.Element => {
 	return (
 		<div className={styles.eventsWrapper}>
 			<PageTitle title={'Our Events'} description={'Lectures, workshops & master-classes'} />
+
 			<div className={styles.filters}>
 				<Dropdown title={'Event category'} selected={selectedCategories} setSelected={setSelectedCategories}
 				          data={categoriesOptions} />
@@ -82,13 +83,14 @@ export const Events = (): JSX.Element => {
 				<NumberInput title={'Show'} value={pageSize} description={'events per page'} setPageSize={setPageSizeHandler} />
 				<SearchField searchTerm={searchTerm} setSearchTerm={setSearchTerm} placeholder={'Search event...'} />
 				<div className={'flex justify-center items-center'}>
-					<div className={'ml-[40px] cursor-pointer'} onClick={() => setViewToggleHandler(ViewToggle.List)}>
+					<div className={'cursor-pointer'} onClick={() => setViewToggleHandler(ViewToggle.List)}>
 						<SvgList color={viewToggle === ViewToggle.List ? '#FF3F3A' : '#424551'} />
 					</div>
-					<div className={'ml-[13.5px] cursor-pointer'} onClick={() => setViewToggleHandler(ViewToggle.Grid)}>
+					<div className={'ml-[0.85rem] cursor-pointer'} onClick={() => setViewToggleHandler(ViewToggle.Grid)}>
 						<SvgGrid color={viewToggle === ViewToggle.Grid ? '#FF3F3A' : '#424551'} />
 					</div>
 				</div>
+
 			</div>
 			{isLoading
 				? <div className={styles.loading}>Loading...</div>

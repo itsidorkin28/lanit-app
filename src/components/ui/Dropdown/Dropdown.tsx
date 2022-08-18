@@ -3,6 +3,7 @@ import styles from './Dropdown.module.scss'
 import { FC } from 'react'
 import { useState } from 'react'
 import { IDropdown } from './Dropdown.interface'
+import { SvgDropdownArrow } from '../../../assets/images/Dropdown/DropdownArrow'
 
 export const Dropdown: FC<IDropdown> = React.memo(({ selected, setSelected, data, title }): JSX.Element => {
 	const [isActive, setIsActive] = useState<boolean>(false)
@@ -34,6 +35,7 @@ export const Dropdown: FC<IDropdown> = React.memo(({ selected, setSelected, data
 			<div className={styles.dropdown} ref={ref}>
 				<div className={styles.btn} onClick={onActive}>
 					{selected}
+					<SvgDropdownArrow />
 				</div>
 				{isActive && <div className={styles.content}>
 					{data.map(el => {

@@ -1,16 +1,16 @@
 .dropdown {
-    @apply relative cursor-pointer select-none w-[160px] my-0 mx-auto;
+    @apply relative cursor-pointer select-none w-[10rem] my-0 mx-auto;
 
     .btn {
-        @apply border rounded p-[10px] bg-white flex items-center justify-between;
+        @apply border rounded px-4 py-[0.75rem] bg-white flex items-center justify-between;
     }
 
     .content {
-        @apply absolute top-[110%] p-[10px] bg-white left-0 border rounded w-full;
+        @apply absolute top-[110%] bg-white left-0 border rounded w-full;
     }
 
     .item {
-        @apply p-[10px] hover:bg-[#f2f0f0] hover:cursor-pointer transition-all;
+        @apply px-4 py-[0.75rem] hover:bg-[#f2f0f0] hover:cursor-pointer transition-all;
     }
 }
 

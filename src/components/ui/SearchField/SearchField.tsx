@@ -5,9 +5,11 @@ import { ISearchField } from './SearchField.interface'
 export const SearchField: FC<ISearchField> = ({ placeholder, searchTerm, setSearchTerm }) => {
 	const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => setSearchTerm(e.currentTarget.value)
 	return (
-		<div>
-			<input type='text' value={searchTerm} onChange={onChangeHandler}
-			       placeholder={placeholder} className={styles.searchField} />
+		<div className={styles.fieldWrapper}>
+			<label>
+				<input type='text' value={searchTerm} onChange={onChangeHandler}
+				       placeholder={placeholder} className={styles.searchField} />
+			</label>
 		</div>
 	)
 }
