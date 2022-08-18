@@ -4,6 +4,7 @@
 
     .date {
         margin-bottom: 1.25rem;
+
         .number {
             @apply text-[1.75rem] font-black;
             line-height: 150%;
@@ -27,6 +28,7 @@
 
     .text {
         margin-bottom: 1.5rem;
+
         .title {
             @apply text-[1.125rem] leading-[150%] mb-[0.5rem] font-bold;
         }

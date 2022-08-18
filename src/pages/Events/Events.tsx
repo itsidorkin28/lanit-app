@@ -113,7 +113,7 @@ export const Events = (): JSX.Element => {
 						: <div>Events not found.</div>}
 				</div>}
 			<div className={'flex justify-center items-center mb-[180px]'}>
-				{!isLoading && eventsList && <Pagination
+				{!isLoading && pageSize > 0 && eventsList && <Pagination
 					className='pagination-bar'
 					currentPage={currentPage}
 					totalCount={searched?.length || 0}

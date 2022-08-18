@@ -1,3 +1,35 @@
+@import '../../../assets/styles/mixins';
+
 .subscribe {
-    @apply min-h-[35.25rem] bg-[#F9E5D6] w-full flex flex-col justify-center items-center;
+    @apply relative min-h-[35.25rem] bg-[#F9E5D6] w-full flex flex-col justify-center items-center;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 354px;
+        height: 246px;
+        background-image: url('../../../assets/images/illustration.svg');
+        background-repeat: no-repeat;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 354px;
+        height: 246px;
+        background-image: url('../../../assets/images/illustration.svg');
+        background-repeat: no-repeat;
+    }
+
+    .input {
+        @apply w-[26.375rem] mr-6 px-4 py-3.5 rounded;
+    }
+
+    .btn {
+        @include super-button(154px, 52px);
+    }
 }

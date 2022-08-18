@@ -1,0 +1,25 @@
+@mixin super-button($width: 206px, $height: 52px) {
+    padding: 0 40px;
+
+    width: $width;
+    height: $height;
+
+    background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+    border-radius: 4px;
+
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    &:hover {
+        background: white;
+        color: var(--primary-color);
+        border: 1px solid;
+        border-color: 1px solid var(--primary-color);
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+    }
+}
+
+

@@ -1,7 +1,9 @@
 .layout {
-    @apply relative flex flex-col justify-center items-center w-full;
+    @apply flex flex-col justify-center items-center w-full;
 
     .content {
-        @apply min-h-screen w-4/5;
+        @apply min-h-screen w-full flex justify-center;
+        background-image: url('../../assets/images/Background/background.svg');
+        background-repeat: no-repeat;
     }
 }
