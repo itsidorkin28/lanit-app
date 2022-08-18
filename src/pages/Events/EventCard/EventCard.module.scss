@@ -1,5 +1,5 @@
 .cardGrid {
-    @apply border rounded flex flex-col hover:shadow-md transition-all mb-[1.5rem] last:mb-0
+    @apply border h-[20.188rem] rounded flex flex-col hover:shadow-md transition-all mb-[1.5rem] last:mb-0
     px-[2.5rem] py-8 justify-center items-start;
 
     .date {
@@ -50,7 +50,7 @@
 }
 
 .cardList {
-    @apply border rounded flex hover:shadow-md transition-all mb-[1.5rem] last:mb-0
+    @apply border h-[9.625rem] rounded flex hover:shadow-md transition-all mb-[1.5rem] last:mb-0
     px-[2.5rem] py-8 justify-start items-center;
 
     .date {
