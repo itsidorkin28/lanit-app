@@ -1,11 +1,11 @@
 .titleWrapper {
     @apply flex flex-col justify-center items-center mb-[60px];
 
-    h2 {
+    .pageTitle {
         @apply uppercase font-bold leading-[150%] tracking-wider;
     }
 
-    p {
+    .pageDescription {
         @apply font-black text-[46px] leading-[130%];
     }
 }
