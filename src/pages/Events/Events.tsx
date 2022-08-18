@@ -70,7 +70,10 @@ export const Events = (): JSX.Element => {
 		return searched
 	}, [currentPage, pageSize, searched])
 
-	const setViewToggleHandler = (value: ViewToggleType) => setViewToggle(value)
+	const setViewToggleHandler = (value: ViewToggleType) => {
+		setViewToggle(value)
+	}
+
 
 	return (
 		<div className={styles.eventsWrapper}>
@@ -83,12 +86,14 @@ export const Events = (): JSX.Element => {
 				<NumberInput title={'Show'} value={pageSize} description={'events per page'} setPageSize={setPageSizeHandler} />
 				<SearchField searchTerm={searchTerm} setSearchTerm={setSearchTerm} placeholder={'Search event...'} />
 				<div className={'flex justify-center items-center'}>
-					<div className={'cursor-pointer'} onClick={() => setViewToggleHandler(ViewToggle.List)}>
+					<button className={'cursor-pointer'} type={'button'}
+					     onClick={() => setViewToggleHandler(ViewToggle.List)}>
 						<SvgList color={viewToggle === ViewToggle.List ? '#FF3F3A' : '#424551'} />
-					</div>
-					<div className={'ml-[0.85rem] cursor-pointer'} onClick={() => setViewToggleHandler(ViewToggle.Grid)}>
+					</button>
+					<button className={'ml-[0.85rem] cursor-pointer'} type={'button'}
+					     onClick={() => setViewToggleHandler(ViewToggle.Grid)}>
 						<SvgGrid color={viewToggle === ViewToggle.Grid ? '#FF3F3A' : '#424551'} />
-					</div>
+					</button>
 				</div>
 
 			</div>
@@ -102,7 +107,7 @@ export const Events = (): JSX.Element => {
 						? currentEventsList?.map(cards => {
 							return (
 								<EventCard date={cards.date} title={cards.title} type={cards.type}
-								           duration={cards.duration} id={cards.id} key={cards.id} viewToggle={viewToggle}/>
+								           duration={cards.duration} id={cards.id} key={cards.id} viewToggle={viewToggle} />
 							)
 						})
 						: <div>Events not found.</div>}

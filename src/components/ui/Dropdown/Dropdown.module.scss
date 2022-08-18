@@ -2,11 +2,13 @@
     @apply relative cursor-pointer select-none w-[10rem] my-0 mx-auto;
 
     .btn {
-        @apply border rounded px-4 py-[0.75rem] bg-white flex items-center justify-between;
+        @apply border rounded px-4 py-[0.75rem] bg-white flex items-center
+        justify-between w-full;
     }
 
     .content {
-        @apply absolute top-[110%] bg-white left-0 border rounded w-full max-h-[245px] overflow-auto;
+        @apply absolute top-[110%] bg-white left-0 border rounded w-full
+        max-h-[245px] overflow-auto shadow;
     }
 
     .item {

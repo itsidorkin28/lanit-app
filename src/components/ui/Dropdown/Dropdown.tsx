@@ -33,10 +33,10 @@ export const Dropdown: FC<IDropdown> = React.memo(({ selected, setSelected, data
 				<span className={'font-bold text-[#424551] leading-[160%]'}>{title}</span>
 			</div>
 			<div className={styles.dropdown} ref={ref}>
-				<div className={styles.btn} onClick={onActive}>
+				<button className={styles.btn} onClick={onActive}>
 					{selected}
 					<SvgDropdownArrow />
-				</div>
+				</button>
 				{isActive && <div className={styles.content}>
 					{data.map(el => {
 						return (
