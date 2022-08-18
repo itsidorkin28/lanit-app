@@ -1,0 +1,33 @@
+.header {
+    @apply mt-[20px] mb-[80px] h-[52px] mx-[345px] flex;
+
+
+    .logo {
+
+    }
+
+    .menu {
+        @apply flex items-start p-0;
+    }
+
+    .cta {
+        @apply flex items-start p-0;
+
+        .button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 40px;
+            gap: 10px;
+
+            width: 206px;
+            height: 52px;
+
+            background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+            border-radius: 4px;
+        }
+    }
+
+
+}

@@ -1,11 +1,11 @@
 import React, { FC } from 'react'
-import styles from './Header.module.scss'
+import styles from './Footer.module.scss'
 
-export const Header: FC = (): JSX.Element => {
+export const Footer: FC = (): JSX.Element => {
 	return (
-		<header className={styles.header}>
-			Header
-		</header>
+		<footer className={styles.footer}>
+			Footer
+		</footer>
 	)
 }
 

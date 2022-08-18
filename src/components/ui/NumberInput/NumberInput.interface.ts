@@ -1,6 +1,6 @@
-export interface IDropdown {
-	selected: string
-	setSelected: (filter: any) => void
-	data: string[]
+export interface INumberInput {
 	title: string
+	value: number
+	description: string
+	setPageSize: (value: number) => void
 }

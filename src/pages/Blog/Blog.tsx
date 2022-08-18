@@ -1,9 +1,10 @@
 import React from 'react'
+import { PageTitle } from '../../components/ui/PageTitle/PageTitle'
 
-export const Events = (): JSX.Element => {
+export const Blog = (): JSX.Element => {
 	return (
 		<div>
-			Events
+			<PageTitle title={'Courses'} description={'Some description'}/>
 		</div>
 	)
 }

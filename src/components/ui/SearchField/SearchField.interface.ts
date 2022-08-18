@@ -1,6 +1,5 @@
-export interface INumberInput {
-	title: string
-	value: number
-	description: string
-	setPageSize: (value: number) => void
+export interface ISearchField {
+	placeholder: string
+	searchTerm: string
+	setSearchTerm: (searchTerm: string) => void
 }

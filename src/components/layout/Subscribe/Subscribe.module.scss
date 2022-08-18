@@ -1,18 +1,3 @@
-.header {
-    @apply h-[5.75rem] border shadow py-[1.25rem] flex;
-
-    .button {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0 40px;
-        gap: 10px;
-
-        width: 206px;
-        height: 52px;
-
-        background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
-        border-radius: 4px;
-    }
+.subscribe {
+    @apply h-[564px] bg-[#F9E5D6] w-full flex flex-col justify-center items-center;
 }

@@ -1,0 +1,7 @@
+.layout {
+    @apply relative flex flex-col justify-center items-center w-full;
+
+    .content {
+        @apply min-h-screen w-4/5;
+    }
+}

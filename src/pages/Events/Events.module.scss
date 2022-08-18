@@ -1,0 +1,17 @@
+.eventsWrapper {
+    .listView {
+        @apply my-[60px];
+    }
+
+    .gridView {
+        @apply my-[60px] grid grid-cols-3 gap-5;
+    }
+
+    .filters {
+        @apply flex justify-between items-center;
+    }
+
+    .loading {
+        @apply my-[60px] text-center;
+    }
+}

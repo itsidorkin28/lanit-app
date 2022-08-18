@@ -1,15 +1,27 @@
 import React, { FC } from 'react'
-import styles from './Layout.module.scss'
-import { ILayout } from './Layout.interface'
+import { Link } from 'react-router-dom'
+import styles from './Header.module.scss'
+import { SvgLogo } from '../../../assets/images/Logo/Logo'
+import { menuData } from './menu.data'
 
-export const Layout: FC<ILayout> = ({ children }): JSX.Element => {
+export const Header: FC = (): JSX.Element => {
 	return (
-		<div className={styles.layout}>
-			<div className={styles.content}>
-				{children}
+		<header className={styles.header}>
+			<div className={styles.logo}>
+				<SvgLogo />
 			</div>
 
-		</div>
+			<nav className={styles.menu}>
+				{menuData.map(m => <Link to={m.path} key={m.path}>{m.name}</Link>)}
+			</nav>
+
+			<div className={styles.cta}>
+				<button className={styles.button}>Get consultation</button>
+				<div>
+					<Link to={'/auth'}>Login / Register</Link>
+				</div>
+			</div>
+		</header>
 	)
 }
 

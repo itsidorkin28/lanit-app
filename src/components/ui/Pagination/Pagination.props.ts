@@ -1,0 +1,8 @@
+export type PaginationPropsType = {
+	onPageChange: (page: number) => void,
+	totalCount: number,
+	siblingCount: number,
+	currentPage: number,
+	pageSize: number,
+	className: string,
+}

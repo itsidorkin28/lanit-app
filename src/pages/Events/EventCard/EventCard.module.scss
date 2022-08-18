@@ -1,0 +1,19 @@
+.card {
+    @apply border rounded flex hover:shadow-md transition-all mb-[24px] last:mb-0
+    px-[40px] py-[32px] justify-start items-center;
+
+    .eventCards {
+        @apply flex flex-col;
+    }
+
+    .button {
+        @apply border rounded px-[32px] font-bold text-[14px] leading-[44px] transition-all
+        hover:text-white;
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+
+        &:hover {
+            background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+        }
+    }
+}

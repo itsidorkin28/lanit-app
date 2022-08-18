@@ -1,26 +1,36 @@
-import React, { useEffect } from 'react'
-import { PageTitle } from '../../components/ui/PageTitle/PageTitle'
-import { useActions } from '../../hooks/useActions'
-import { useTypedSelector } from '../../hooks/useTypedSelector'
+import React, { FC } from 'react'
+import { IEventCards } from '../../../store/eventCards/eventCards.interface'
+import styles from './EventCard.module.scss'
+import { getDay, getEndTime, getMonth, getStartTime } from '../../../utils/date/convertDate'
 
-export const Events = (): JSX.Element => {
-	const { getAllEventCards } = useActions()
-	useEffect(() => {
-		getAllEventCards()
-	}, [getAllEventCards])
-	const eventCards = useTypedSelector(state => state.eventCards.eventCards)
-	const isLoading = useTypedSelector(state => state.eventCards.isLoading)
+export const EventCard: FC<IEventCards> = React.memo(({ title, date, duration, type, id }): JSX.Element => {
+
+	const dateNumber = getDay(date)
+	const dateMonth = getMonth(date)
+	const startTime = getStartTime(date)
+	const endTime = getEndTime(date, duration)
+
 	return (
-		<div>
-			<PageTitle title={'Our Events'} description={'Lectures, workshops & master-classes'} />
-			{isLoading
-				? <div>Loading...</div>
-				: <div>
-					{eventCards
-						? eventCards.map(cards => <div key={cards.id}>{cards.title}</div>)
-						: <div>Events not found.</div>}
-				</div>}
+		<div className={styles.card}>
+			<div>
+				<div>
+					{dateNumber}
+				</div>
+				<div>
+					<p>{dateMonth}</p>
+					<p>{startTime} - {endTime}</p>
+				</div>
+			</div>
+
+			<div>
+				<h3>{title}</h3>
+				<p>{type}</p>
+			</div>
+
+			<button className={styles.button}>
+				View more
+			</button>
 		</div>
 	)
-}
+})
 
