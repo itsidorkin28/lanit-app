@@ -6,7 +6,7 @@
     }
 
     .content {
-        @apply absolute top-[110%] bg-white left-0 border rounded w-full;
+        @apply absolute top-[110%] bg-white left-0 border rounded w-full max-h-[245px] overflow-auto;
     }
 
     .item {
