@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/lanit-app/static/css/main.f76405ce.css",
-    "main.js": "/lanit-app/static/js/main.c2e947e0.js",
+    "main.css": "/lanit-app/static/css/main.004dffe3.css",
+    "main.js": "/lanit-app/static/js/main.b25ead3f.js",
     "static/js/787.4ded2f83.chunk.js": "/lanit-app/static/js/787.4ded2f83.chunk.js",
+    "static/media/illustration.svg": "/lanit-app/static/media/illustration.0db728749fd5abc0e6e5.svg",
+    "static/media/background.svg": "/lanit-app/static/media/background.d166f277ae4e5ed62da3.svg",
     "static/media/SvgSearch.svg": "/lanit-app/static/media/SvgSearch.6b4f7b8e6c7c776d678a.svg",
     "index.html": "/lanit-app/index.html",
-    "main.f76405ce.css.map": "/lanit-app/static/css/main.f76405ce.css.map",
-    "main.c2e947e0.js.map": "/lanit-app/static/js/main.c2e947e0.js.map",
+    "main.004dffe3.css.map": "/lanit-app/static/css/main.004dffe3.css.map",
+    "main.b25ead3f.js.map": "/lanit-app/static/js/main.b25ead3f.js.map",
     "787.4ded2f83.chunk.js.map": "/lanit-app/static/js/787.4ded2f83.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f76405ce.css",
-    "static/js/main.c2e947e0.js"
+    "static/css/main.004dffe3.css",
+    "static/js/main.b25ead3f.js"
   ]
 }
