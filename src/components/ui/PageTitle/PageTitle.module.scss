@@ -1,11 +1,11 @@
 .titleWrapper {
-    @apply flex flex-col justify-center items-center mb-[60px];
+    @apply mb-[60px] flex flex-col justify-center items-center;
 
     .pageTitle {
-        @apply uppercase font-bold leading-[150%] tracking-wider;
+        @apply leading-[150%] uppercase font-bold  tracking-wider;
     }
 
     .pageDescription {
-        @apply font-black text-[46px] leading-[130%];
+        @apply text-[46px] leading-[130%] font-black;
     }
 }

@@ -1,10 +1,10 @@
 .eventsWrapper {
     .listView {
-        @apply my-[60px];
+        @apply my-14;
     }
 
     .gridView {
-        @apply my-[60px] grid grid-cols-3 gap-5;
+        @apply my-14 grid grid-cols-3 gap-5;
     }
 
     .filters {
@@ -12,6 +12,6 @@
     }
 
     .loading {
-        @apply my-[60px] text-center;
+        @apply my-14 text-center;
     }
 }
