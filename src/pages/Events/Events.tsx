@@ -40,7 +40,6 @@ export const Events = (): JSX.Element => {
 	const isLoading = useTypedSelector(state => state.eventCards.isLoading)
 	const selectedCategories = useTypedSelector(state => state.eventCards.categoriesFilter)
 	const selectedNovelty = useTypedSelector(state => state.eventCards.noveltyFilter)
-	const searched = eventCards && eventCards.filter(({ title }) => title.toLowerCase().includes(searchTerm.toLowerCase()))
 	const setSelectedCategories = useCallback((filter: CategoriesFilterType) => {
 		dispatch(setEventCardsCategoriesFilter({ filter }))
 		setCurrentPage(1)
@@ -52,6 +51,7 @@ export const Events = (): JSX.Element => {
 	}, [dispatch])
 
 	const eventsList = useSelectedCategories(selectedCategories, eventCards!)
+	const searched = eventCards && eventsList.filter(({ title }) => title.toLowerCase().includes(searchTerm.toLowerCase()))
 
 	const setPageSizeHandler = useCallback((value: number) => {
 		setPageSize(value)
