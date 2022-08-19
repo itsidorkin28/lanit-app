@@ -48,7 +48,7 @@ export const Pagination = (props: PaginationPropsType) => {
 				<div className={classnames({
 					'arrowNone': currentPage === 1,
 				})}>
-					<SvgPageArrow className={'left'}/>
+					<SvgPageArrow className={'left'} />
 				</div>
 			</li>
 			{paginationRange!.map((pageNumber, index) => {
