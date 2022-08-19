@@ -12,7 +12,8 @@ export const Footer: FC = (): JSX.Element => {
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.top}>
-				top
+				<span>Спасибо Юлии и Александре <SvgHeart
+					className={'inline-block'} /></span>
 			</div>
 			<div className={styles.bottom}>
 				<div className={'flex justify-between items-center w-4/5'}>
