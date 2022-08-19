@@ -2,10 +2,10 @@
     @apply mb-[60px] flex flex-col justify-center items-center;
 
     .pageTitle {
-        @apply leading-[150%] uppercase font-bold tracking-wider;
+        @apply leading-[150%] uppercase font-bold tracking-wider text-center;
     }
 
     .pageDescription {
-        @apply text-[46px] leading-[130%] font-black;
+        @apply text-[46px] leading-[130%] font-black text-center;
     }
 }

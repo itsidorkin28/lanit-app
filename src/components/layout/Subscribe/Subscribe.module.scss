@@ -12,6 +12,9 @@
         height: 246px;
         background-image: url('../../../assets/images/illustration.svg');
         background-repeat: no-repeat;
+        @media screen and (max-width: 1350px) {
+            display: none;
+        }
     }
 
     &:after {
@@ -23,13 +26,26 @@
         height: 246px;
         background-image: url('../../../assets/images/illustration.svg');
         background-repeat: no-repeat;
+        @media screen and (max-width: 1350px) {
+            display: none;
+        }
     }
 
-    .input {
-        @apply w-[26.375rem] mr-6 px-4 py-3.5 rounded;
+    .form {
+        .input {
+            @apply w-[26.375rem] mr-6 px-4 py-3.5 rounded;
+        }
+
+        .btn {
+            @include super-button(154px, 52px);
+            @media screen and (max-width: 665px) {
+                @apply mt-6;
+            }
+        }
+
+        @media screen and (max-width: 665px) {
+            @apply flex flex-col justify-center items-center;
+        }
     }
 
-    .btn {
-        @include super-button(154px, 52px);
-    }
 }
