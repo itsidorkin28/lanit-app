@@ -1,4 +1,18 @@
 .footer {
-    @apply h-[24.75rem] bg-[#1F212B] w-full flex flex-col justify-center items-center text-white;
+    @apply h-[24.75rem] bg-[#1F212B] w-full flex flex-col justify-between items-center text-white;
 
+    .top {
+        @apply w-4/5 flex justify-center items-center;
+        margin-top: 5rem;
+    }
+
+    .bottom {
+        @apply w-full bg-[#2A2D36] flex justify-center items-center;
+        height: 3.625rem;
+
+        .button {
+            @apply uppercase text-[#AFABA9] leading-[150%] text-[0.875rem] font-bold
+            hover:text-[#E1E1E1FF] transition-colors;
+        }
+    }
 }
